@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="ISO-8859-1">
+	<title>Create-Users Managment</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+		integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+	
+	<link rel="shortcut icon" href="https://img.icons8.com/ios/50/000000/monitor--v2.png" type="image/x-icon">
+
+<body>
+	<div class="container">
+		<h1 class="display-3">Enter your Details</h1>
+		<hr>
+		<div class="formGroup">
+			<form action="#" th:action="@{/saveUser}" th:object="${user}" method="POST" class="form-horizontal">
+
+				<div class="form-group">
+					<label for="firstname" class="col-sm-2 control-label">First Name</label>
+					<div class="col-sm-10">
+						<input type="text" th:field="*{firstname}" class="form-control" id="firstname" required
+							placeholder="Enter your first name">
+					</div>
+				</div>
+
+				<div class="form-group">
+					<label for="lastname" class="col-sm-2 control-label">Last Name</label>
+					<div class="col-sm-10">
+						<input type="text" th:field="*{lastname}" class="form-control" id="lastname" required
+							placeholder="Enter your last name">
+					</div>
+				</div>
+
+				<div class="form-group">
+					<label for="email" class="col-sm-2 control-label">Email Id</label>
+					<div class="col-sm-10">
+						<input type="text" th:field="*{email}" class="form-control" id="email" required
+							placeholder="Enter your email id">
+					</div>
+				</div>
+
+				<div class="form-group dropDown">
+					<label for="dom" style="margin-left: 1%">Domain</label>
+					<select class="form-control" th:field="*{domain}" id="dom" style="margin-left: 1% ; max-width:81%">
+						<option value="none">-None-</option>
+						<option value="Java">Java</option>
+						<option value="Python">Python</option>
+						<option value="Java Script">Java Script</option>
+						<option value="C++">C++</option>
+						<option value="PHP">PHP</option>
+					</select>
+				</div>
+
+				<div class="form-group">
+					<div class="col-sm-offset-2 col-sm-10">
+						<button type="submit" class="btn btn-primary">Submit</button>
+						&nbsp &nbsp  <a href="#" th:href="@{/}" class="btn btn-light">Back to Home</a>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+</body>
+
+</html>

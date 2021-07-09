@@ -1,0 +1,59 @@
+body, html {
+  height: 100%;
+}
+.wel{
+	font-family: 'Kaushan Script', cursive;
+	font-size: 140px;
+}
+
+.main h1 {
+  
+    display:flex;
+    justify-content: center;
+    margin-top: 25vh;
+}
+.footerBlock{
+	display: flex;
+    justify-content: center;
+    margin-top: 14%;
+}
+.footerBlock a{
+	color: white;
+}
+
+.buttongroup{
+	 display: flex;
+    justify-content: space-evenly;
+        margin: 50px 400px
+}
+
+  .background {
+  background-image: url("https://images.pexels.com/photos/1054218/pexels-photo-1054218.jpeg?cs=srgb&dl=pexels-stephan-seeber-1054218.jpg&fm=jpg");
+  background-color: #cccccc; 
+  height: 500px; 
+  background-position: center; 
+  background-repeat: no-repeat; 
+  background-size: cover; 
+ }
+ @media only screen 
+    and (min-device-width : 320px) 
+    and (max-device-width : 480px) {
+
+    .buttongroup{
+	    margin: 50px 121px;
+}
+
+    }
+    @media only screen 
+    and (min-device-width : 700px) 
+    and (max-device-width : 1200px) {
+
+        .buttongroup{
+	    margin: 50px 269px;
+}
+
+    }
+ 
+ 
+ 
+ 

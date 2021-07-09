@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="ISO-8859-1">
+	<title>Details-Users Managment</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+		integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+	<link rel="shortcut icon" href="https://img.icons8.com/ios/50/000000/monitor--v2.png" type="image/x-icon">
+
+</head>
+
+<body>
+	<div align="center" class="container my-2">
+		<h1 class="display-4">Users List</h1>
+		<table border="2" class="table table-hover">
+			<thead align="center">
+				<tr>
+					<th>Id</th>
+					<th>First Name</th>
+					<th>Last Name</th>
+					<th>Email Id</th>
+					<th>Domain</th>
+					<th>Update Details</th>
+					<th>Delete</th>
+				</tr>
+			</thead>
+			<tbody align="center">
+				<tr th:each="users : ${listUsers}">
+					<td th:text="${users.id}"></td>
+					<td th:text="${users.firstname}"></td>
+					<td th:text="${users.lastname}"></td>
+					<td th:text="${users.email}"></td>
+					<td th:text="${users.domain}"></td>
+					<td><a th:href="@{/updateUser/{id}(id=${users.id})}" class="btn btn-success" href="#"
+							role="button">Update</a></td>
+					<td><a th:href="@{/deleteUser/{id}(id=${users.id})}" class="btn btn-danger" href="#"
+							role="button">Delete</a></td>
+				</tr>
+			</tbody>
+		</table>
+		<a class="btn btn-default" th:href="@{/}" role="button">Back to Home</a>
+	</div>
+
+</body>
+
+</html>
